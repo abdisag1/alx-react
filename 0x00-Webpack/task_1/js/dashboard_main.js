@@ -10,9 +10,8 @@ $("body").append("<p id='count'></p>");
 
 $("body").append("<p>Copyright - Holberton School</p>");
 
-function updateCounter() {
-  count += 1;
-  $("#count").html(`${count} clicks on the button`);
-}
-
-$("button").on("click", _.debounce(updateCounter, 500));
+$('button').on('click', _.debounce(function updateCounter() {
+    // Do something
+    count += 1;
+    $("#count").html(`${count} clicks on the button`);
+}, 500));
