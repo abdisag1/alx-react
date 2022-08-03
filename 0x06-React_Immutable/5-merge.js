@@ -1,4 +1,18 @@
+import { Map, List } from 'immutable';
+
 export function concatElements(page1, page2) {
-        newlist=[]
-    return List
+  const page1List = List(page1);
+  const page2List = List(page2);
+  const all = page1List.concat(page2List);
+
+  return all;
+}
+export function mergeElements(page1, page2) {
+  const page1Obj = Map(page1);
+  const page2Obj = Map(page2);
+  const merge = {
+    ...page1Obj,
+    ...page2Obj,
+  };
+  return merge;
 }
