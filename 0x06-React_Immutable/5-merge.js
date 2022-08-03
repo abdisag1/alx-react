@@ -10,9 +10,5 @@ export function concatElements(page1, page2) {
 export function mergeElements(page1, page2) {
   const page1Obj = Map(page1);
   const page2Obj = Map(page2);
-  const merge = {
-    ...page1Obj,
-    ...page2Obj,
-  };
-  return merge;
+  return page1Obj.merge(page1Obj)
 }
